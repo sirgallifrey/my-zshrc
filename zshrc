@@ -21,12 +21,12 @@ if [ -r ~/.zsh_functions ]; then
    source ~/.zsh_functions
 fi
 
-if [ -r ~/.zsh_aliases ]; then
-   source ~/.zsh_aliases
-fi
-
 if [ -r ~/.zsh_custom  ]; then
    source ~/.zsh_custom
+fi
+
+if [ -r ~/.zsh_aliases ]; then
+   source ~/.zsh_aliases
 fi
 
 source ~/antigen/antigen.zsh

@@ -19,7 +19,7 @@ echo "source ./zshrc/zshrc" > ~/.zshrc
 ```
 
 
-This zsh config will source three files: ~/.zsh_functions ~/.zsh_aliases and ~/.zsh_custom in that order.
+This zsh config will source three files: ~/.zsh_functions ~/.zsh_custom and ~/zsh_aliases in that order.
 Use them to make your custom configs and changes.
 
 
