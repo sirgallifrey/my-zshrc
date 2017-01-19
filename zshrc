@@ -16,6 +16,7 @@ function clone {
 }
 alias cd-projects='cd ~/Projects'
 alias cdp=cd-projects
+alias npm=npm --color=always
 
 if [ -r ~/.zsh_functions ]; then
    source ~/.zsh_functions
