@@ -11,6 +11,12 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 plugins=(git)
 
+function clone {
+    (cd ~/Projects; git clone "$@")
+}
+alias cd-projects='cd ~/Projects'
+alias cdp=cd-projects
+
 if [ -r ~/.zsh_functions ]; then
    source ~/.zsh_functions
 fi
