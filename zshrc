@@ -8,6 +8,14 @@ POWERLEVEL9K_STATUS_VERBOSE=false
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+if [[ -n "$POWERLEVEL9K_INSTALLATION_PATH" ]]; then
+else
+  if [[ -n "$ADOTDIR" ]]; then
+  else 
+    ADOTDIR=$HOME/.antigen
+  fi
+  POWERLEVEL9K_INSTALLATION_PATH=$ADOTDIR/bundles/bhilburn/powerlevel9k
+fi
 
 plugins=(git)
 
@@ -16,7 +24,9 @@ function clone {
 }
 alias cd-projects='cd ~/Projects'
 alias cdp=cd-projects
-alias npm=npm --color=always
+alias npm="npm --color=always"
+alias k="k -h"
+alias ls=k
 
 if [ -r ~/.zsh_functions ]; then
    source ~/.zsh_functions
@@ -43,6 +53,9 @@ antigen bundle pip
 antigen bundle lol
 antigen bundle command-not-found
 antigen bundle history
+antigen bundle unixorn/autoupdate-antigen.zshplugin
+antigen bundle supercrabtree/k
+
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
